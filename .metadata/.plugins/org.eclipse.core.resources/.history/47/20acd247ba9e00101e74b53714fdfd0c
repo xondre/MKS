@@ -64,7 +64,7 @@ volatile uint32_t Tick;
 void tlacitko(void){
 	static uint32_t old_s2;
 	static uint32_t old_s1, debounce_time;
-	static uint32_t old_time, off_time;
+	static uint32_t off_time;
 	static uint16_t debounce = 0xFFFF;
 
 

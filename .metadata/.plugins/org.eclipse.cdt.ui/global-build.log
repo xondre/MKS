@@ -365,3 +365,228 @@ Finished building: default.size.stdout
  
 Finished building: MKS2.list
  
+12:45:08 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:67:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   67 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	      8	   1592	   7016	   1b68	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+12:49:30 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:67:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   67 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5436	      8	   1592	   7036	   1b7c	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+12:55:15 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:67:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   67 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+../Core/Src/main.c:66:33: warning: variable 'debounce_time' set but not used [-Wunused-but-set-variable]
+   66 |         static uint32_t old_s1, debounce_time;
+      |                                 ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5432	      8	   1592	   7032	   1b78	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+12:55:31 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-size  MKS2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5432	      8	   1592	   7032	   1b78	MKS2.elf
+Finished building: default.size.stdout
+ 
+12:57:20 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:68:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   68 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5436	      8	   1592	   7036	   1b7c	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+12:59:40 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:68:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   68 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	      8	   1592	   7016	   1b68	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+13:02:22 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:68:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   68 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5428	      8	   1592	   7028	   1b74	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+13:03:20 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:68:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   68 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5408	      8	   1592	   7008	   1b60	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+13:08:07 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:68:25: warning: variable 'off_time' set but not used [-Wunused-but-set-variable]
+   68 |         static uint32_t off_time;
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5408	      8	   1592	   7008	   1b60	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+13:14:54 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5352	      4	   1588	   6944	   1b20	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+13:18:25 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:81:20: error: 'debounce_time' undeclared (first use in this function); did you mean 'debounce'?
+   81 |         if (Tick > debounce_time + DEBOUNCE_TIME) {
+      |                    ^~~~~~~~~~~~~
+      |                    debounce
+../Core/Src/main.c:81:20: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:18:50 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5428	      8	   1592	   7028	   1b74	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
+13:31:58 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:78:20: error: 'old_time' undeclared (first use in this function); did you mean 'off_time'?
+   78 |         if (Tick > old_time + BTN_TIME) {
+      |                    ^~~~~~~~
+      |                    off_time
+../Core/Src/main.c:78:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:66:25: warning: unused variable 'old_s1' [-Wunused-variable]
+   66 |         static uint32_t old_s1, debounce_time;
+      |                         ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:32:17 **** Incremental Build of configuration Debug for project MKS2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitko':
+../Core/Src/main.c:66:25: warning: unused variable 'old_s1' [-Wunused-variable]
+   66 |         static uint32_t old_s1, debounce_time;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "MKS2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS2.elf
+ 
+arm-none-eabi-size  MKS2.elf 
+arm-none-eabi-objdump -h -S MKS2.elf  > "MKS2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5424	      8	   1592	   7024	   1b70	MKS2.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS2.list
+ 
