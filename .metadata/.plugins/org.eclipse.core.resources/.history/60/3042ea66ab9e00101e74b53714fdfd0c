@@ -56,15 +56,7 @@ volatile uint32_t Tick;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void blikac(void)
-	  	   {
-	  	   static uint32_t delay;
 
-	  	   if (Tick > delay + LED_TIME_BLINK) {
-	  	   LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-	  	   delay = Tick;
-	  	   }
-	  	   }
 /* USER CODE END 0 */
 
 /**
@@ -109,9 +101,17 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  blikac();
 
+	  void blikac(void)
+	  	   {
+	  	   static uint32_t delay;
 
-	  blikac();  //call the blinking function
+	  	   if (Tick > delay + LED_TIME_BLINK) {
+	  	   LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+	  	   delay = Tick;
+	  	   }
+	  	   }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

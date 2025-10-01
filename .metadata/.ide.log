@@ -1650,3 +1650,4 @@ java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()"
 2025-10-01 11:24:29,966 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1919mS.
 2025-10-01 11:24:29,971 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 4mS.
 2025-10-01 11:24:29,975 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-10-01 12:01:28,274 [INFO] NvicTabbedPanel:226 - Cannot restore the selected Tab for NVIC
