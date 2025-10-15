@@ -1045,3 +1045,176 @@ Finished building: default.size.stdout
  
 Finished building: MKS4.list
  
+13:25:47 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'buttons':
+../Core/Src/main.c:78:29: error: 'S1' undeclared (first use in this function)
+   78 |         if(HAL_GPIO_ReadPin(S1) && (HAL_GPIO_ReadPin(S2) == 0)) {       //voltage
+      |                             ^~
+../Core/Src/main.c:78:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:78:12: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   78 |         if(HAL_GPIO_ReadPin(S1) && (HAL_GPIO_ReadPin(S2) == 0)) {       //voltage
+      |            ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:197,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:78:54: error: 'S2' undeclared (first use in this function)
+   78 |         if(HAL_GPIO_ReadPin(S1) && (HAL_GPIO_ReadPin(S2) == 0)) {       //voltage
+      |                                                      ^~
+../Core/Src/main.c:78:37: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   78 |         if(HAL_GPIO_ReadPin(S1) && (HAL_GPIO_ReadPin(S2) == 0)) {       //voltage
+      |                                     ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:82:18: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   82 |         }else if(HAL_GPIO_ReadPin(S2) && (HAL_GPIO_ReadPin(S1) == 0)) { //temperature
+      |                  ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:82:43: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   82 |         }else if(HAL_GPIO_ReadPin(S2) && (HAL_GPIO_ReadPin(S1) == 0)) { //temperature
+      |                                           ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:207:14: warning: implicit declaration of function 'HAL_GetTicks'; did you mean 'HAL_GetTick'? [-Wimplicit-function-declaration]
+  207 |         if(((HAL_GetTicks() - current_time) > 1000)  && state != SHOW_POT) {
+      |              ^~~~~~~~~~~~
+      |              HAL_GetTick
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:27:34 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:197,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Core/Src/main.c: In function 'buttons':
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:84:36: warning: passing argument 1 of 'HAL_GPIO_ReadPin' makes pointer from integer without a cast [-Wint-conversion]
+   84 | #define GPIO_PIN_1                 ((uint16_t)0x0002U)  /* Pin 1 selected    */
+      |                                    ^~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    short unsigned int
+../Core/Inc/main.h:64:16: note: in expansion of macro 'GPIO_PIN_1'
+   64 | #define S1_Pin GPIO_PIN_1
+      |                ^~~~~~~~~~
+../Core/Src/main.c:78:29: note: in expansion of macro 'S1_Pin'
+   78 |         if(HAL_GPIO_ReadPin(S1_Pin) && (HAL_GPIO_ReadPin(S2_Pin) == 0)) {       //voltage
+      |                             ^~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:50: note: expected 'GPIO_TypeDef *' but argument is of type 'short unsigned int'
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                                    ~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:78:12: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   78 |         if(HAL_GPIO_ReadPin(S1_Pin) && (HAL_GPIO_ReadPin(S2_Pin) == 0)) {       //voltage
+      |            ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:83:36: warning: passing argument 1 of 'HAL_GPIO_ReadPin' makes pointer from integer without a cast [-Wint-conversion]
+   83 | #define GPIO_PIN_0                 ((uint16_t)0x0001U)  /* Pin 0 selected    */
+      |                                    ^~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    short unsigned int
+../Core/Inc/main.h:62:16: note: in expansion of macro 'GPIO_PIN_0'
+   62 | #define S2_Pin GPIO_PIN_0
+      |                ^~~~~~~~~~
+../Core/Src/main.c:78:58: note: in expansion of macro 'S2_Pin'
+   78 |         if(HAL_GPIO_ReadPin(S1_Pin) && (HAL_GPIO_ReadPin(S2_Pin) == 0)) {       //voltage
+      |                                                          ^~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:50: note: expected 'GPIO_TypeDef *' but argument is of type 'short unsigned int'
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                                    ~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:78:41: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   78 |         if(HAL_GPIO_ReadPin(S1_Pin) && (HAL_GPIO_ReadPin(S2_Pin) == 0)) {       //voltage
+      |                                         ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:83:36: warning: passing argument 1 of 'HAL_GPIO_ReadPin' makes pointer from integer without a cast [-Wint-conversion]
+   83 | #define GPIO_PIN_0                 ((uint16_t)0x0001U)  /* Pin 0 selected    */
+      |                                    ^~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    short unsigned int
+../Core/Inc/main.h:62:16: note: in expansion of macro 'GPIO_PIN_0'
+   62 | #define S2_Pin GPIO_PIN_0
+      |                ^~~~~~~~~~
+../Core/Src/main.c:82:35: note: in expansion of macro 'S2_Pin'
+   82 |         }else if(HAL_GPIO_ReadPin(S2_Pin) && (HAL_GPIO_ReadPin(S1_Pin) == 0)) { //temperature
+      |                                   ^~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:50: note: expected 'GPIO_TypeDef *' but argument is of type 'short unsigned int'
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                                    ~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:82:18: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   82 |         }else if(HAL_GPIO_ReadPin(S2_Pin) && (HAL_GPIO_ReadPin(S1_Pin) == 0)) { //temperature
+      |                  ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:84:36: warning: passing argument 1 of 'HAL_GPIO_ReadPin' makes pointer from integer without a cast [-Wint-conversion]
+   84 | #define GPIO_PIN_1                 ((uint16_t)0x0002U)  /* Pin 1 selected    */
+      |                                    ^~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    short unsigned int
+../Core/Inc/main.h:64:16: note: in expansion of macro 'GPIO_PIN_1'
+   64 | #define S1_Pin GPIO_PIN_1
+      |                ^~~~~~~~~~
+../Core/Src/main.c:82:64: note: in expansion of macro 'S1_Pin'
+   82 |         }else if(HAL_GPIO_ReadPin(S2_Pin) && (HAL_GPIO_ReadPin(S1_Pin) == 0)) { //temperature
+      |                                                                ^~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:50: note: expected 'GPIO_TypeDef *' but argument is of type 'short unsigned int'
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                                    ~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:82:47: error: too few arguments to function 'HAL_GPIO_ReadPin'
+   82 |         }else if(HAL_GPIO_ReadPin(S2_Pin) && (HAL_GPIO_ReadPin(S1_Pin) == 0)) { //temperature
+      |                                               ^~~~~~~~~~~~~~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h:292:19: note: declared here
+  292 | GPIO_PinState     HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+      |                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:207:14: warning: implicit declaration of function 'HAL_GetTicks'; did you mean 'HAL_GetTick'? [-Wimplicit-function-declaration]
+  207 |         if(((HAL_GetTicks() - current_time) > 1000)  && state != SHOW_POT) {
+      |              ^~~~~~~~~~~~
+      |              HAL_GetTick
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:29:49 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:207:14: warning: implicit declaration of function 'HAL_GetTicks'; did you mean 'HAL_GetTick'? [-Wimplicit-function-declaration]
+  207 |         if(((HAL_GetTicks() - current_time) > 1000)  && state != SHOW_POT) {
+      |              ^~~~~~~~~~~~
+      |              HAL_GetTick
+arm-none-eabi-gcc -o "MKS4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Temp/ondrejka/MKS/MKS4/Debug/../Core/Src/main.c:207:(.text.main+0x10c): undefined reference to `HAL_GetTicks'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: MKS4.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:30:20 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS4.elf
+ 
+arm-none-eabi-size  MKS4.elf 
+arm-none-eabi-objdump -h -S MKS4.elf  > "MKS4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11752	     12	   1796	  13560	   34f8	MKS4.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS4.list
+ 

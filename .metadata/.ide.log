@@ -1004,3 +1004,45 @@
 2025-10-15 11:14:08,199 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1913mS.
 2025-10-15 11:14:08,200 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
 2025-10-15 11:14:08,205 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-10-15 12:11:16,666 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:11:16,941 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:11:18,221 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:11:18,408 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:11:42,288 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:12:03,055 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:12:03,812 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-15 12:14:13,568 [INFO] Gpio:278 - dependency for GPIO [ADC, RCC, SYS, USART2]
+2025-10-15 12:17:23,276 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 523828920 Bytes (909115392)
+2025-10-15 12:17:25,026 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 557953096 Bytes (909115392)
+2025-10-15 12:17:27,968 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 595132088 Bytes (909115392)
+2025-10-15 12:17:28,394 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-10-15 12:17:28,394 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-10-15 12:17:28,394 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-10-15 12:17:28,394 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-10-15 12:17:28,394 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-10-15 12:17:28,394 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-10-15 12:17:28,395 [INFO] CodeGenerator:892 - code generatio: config db path: C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2025-10-15 12:17:28,557 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\MXTmpFiles\license.tmp_save
+2025-10-15 12:17:28,963 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\MXTmpFiles\license.tmp
+2025-10-15 12:17:29,057 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\MXTmpFiles\gpio.tmp_save
+2025-10-15 12:17:29,291 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\MXTmpFiles\gpio.tmp
+2025-10-15 12:17:29,498 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\Core\Src\stm32f0xx_it.c_save
+2025-10-15 12:17:29,980 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\Core\Src\stm32f0xx_it.c
+2025-10-15 12:17:29,993 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\Core\Inc\stm32f0xx_it.h_save
+2025-10-15 12:17:30,104 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\Core\Inc\stm32f0xx_it.h
+2025-10-15 12:17:30,127 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\Core\Src\stm32f0xx_hal_msp.c_save
+2025-10-15 12:17:30,344 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\Core\Src\stm32f0xx_hal_msp.c
+2025-10-15 12:17:30,355 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\MXTmpFiles\system.tmp_save
+2025-10-15 12:17:30,447 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\MXTmpFiles\system.tmp
+2025-10-15 12:17:30,476 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\Core\Inc\stm32f0xx_hal_conf.h_save
+2025-10-15 12:17:30,598 [INFO] CodeEngine:345 - Generated code: C:\Temp\ondrejka\MKS\MKS4\Core\Inc\stm32f0xx_hal_conf.h
+2025-10-15 12:17:30,635 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\Core\Inc\main.h_save
+2025-10-15 12:17:30,810 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\Core\Inc\main.h
+2025-10-15 12:17:30,823 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS4\Core\Src\main.c_save
+2025-10-15 12:17:31,011 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS4\Core\Src\main.c
+2025-10-15 12:17:31,517 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 268mS.
+2025-10-15 12:17:31,523 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-10-15 12:17:31,646 [INFO] ConfigFileManager:1595 - The Die is : DIE440
+2025-10-15 12:17:33,588 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2065mS.
+2025-10-15 12:17:33,589 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-10-15 12:17:33,594 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.

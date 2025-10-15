@@ -1,4 +1,4 @@
-12:07:30 **** Incremental Build of configuration Debug for project MKS4 ****
+13:30:20 **** Incremental Build of configuration Debug for project MKS4 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "MKS4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,11 +7,11 @@ Finished building target: MKS4.elf
 arm-none-eabi-size  MKS4.elf 
 arm-none-eabi-objdump -h -S MKS4.elf  > "MKS4.list"
    text	   data	    bss	    dec	    hex	filename
-  11192	     12	   1780	  12984	   32b8	MKS4.elf
+  11752	     12	   1796	  13560	   34f8	MKS4.elf
 Finished building: default.size.stdout
  
 Finished building: MKS4.list
  
 
-12:07:32 Build Finished. 0 errors, 0 warnings. (took 1s.199ms)
+13:30:21 Build Finished. 0 errors, 0 warnings. (took 1s.240ms)
 

@@ -32,13 +32,6 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ADC_Q 7
-
-/* Temperature sensor calibration value address */
-#define TEMP110_CAL_ADDR ((uint16_t*) ((uint32_t) 0x1FFFF7C2))
-#define TEMP30_CAL_ADDR ((uint16_t*) ((uint32_t) 0x1FFFF7B8))
-/* Internal voltage reference calibration value address */
-#define VREFINT_CAL_ADDR ((uint16_t*) ((uint32_t) 0x1FFFF7BA))
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -60,7 +53,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_ADC_Init(void);
-static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -68,70 +60,7 @@ static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-//global variables for values given by ADC
-static volatile uint32_t raw_pot;	//potentiometer
-static volatile uint32_t raw_temp;	//temperature
-static volatile uint32_t raw_volt;	//voltage reference
-static uint32_t current_time;
-
-void buttons(void){
-	if(HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) && (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) == 0)) {	//voltage
-		state = SHOW_VOLT;
-		current_time = HAL_GetTick();
-
-	}else if(HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) && (HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) == 0)) {	//temperature
-		state = SHOW_TEMP;
-		current_time = HAL_GetTick();
-	}
-
-	/*
-	static uint32_t old_s2;
-	static uint32_t old_s1, debounce_time;
-	static uint32_t old_time, off_time;
-	static uint16_t debounce = 0xFFFF;
-
-
-	uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
-	uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
-
-	if (Tick > off_time) {
-			LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
-
-	if (Tick > old_time + BTN_TIME) {
-		old_time = Tick;
-
-		if (old_s2 && !new_s2) { // falling edge
-			off_time = Tick + LED_TIME_SHORT;
-			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
-		old_s2 = new_s2;
-	}
-
-	if (Tick > debounce_time + DEBOUNCE_TIME) {
-		debounce_time = Tick;
-
-		debounce <<= 1;
-
-		if (new_s1) debounce |= 0x0001;
-
-
-		if (debounce == 0x7FFF) {
-	 		off_time = Tick + LED_TIME_LONG;
-	 		LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
-	}
-
-
-
-	//if (old_s1 && !new_s1) { // falling edge
-	 //	off_time = Tick + LED_TIME_LONG;
-	 	//LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-	//}
-	//old_s1 = new_s1;
-	*/
-}
-
+static volatile uint32_t raw_pot;
 
 /* USER CODE END 0 */
 
@@ -171,47 +100,18 @@ int main(void)
   HAL_ADC_Start_IT(&hadc);
   sct_init();
 
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	buttons();
-
-	uint16_t value = 0;
-	uint8_t bargraph = ((raw_pot*501)/4096)*9/501;		//convert 0-500 value to bargraph value
-
-	switch(state){
-		case SHOW_POT:
-			value = (raw_pot*501)/4096;	//convert values from ADC potentiometer
-			break;
-		case SHOW_VOLT:
-			value = 330 * (*VREFINT_CAL_ADDR) / raw_volt; //calculate voltage
-			break;
-
-		case SHOW_TEMP:
-			int32_t temperature = (raw_temp - (int32_t)(*TEMP30_CAL_ADDR));
-			temperature = temperature * (int32_t)(110 - 30);
-			temperature = temperature / (int32_t)(*TEMP110_CAL_ADDR - *TEMP30_CAL_ADDR);
-			temperature = temperature + 30;
-			value = temperature;
-			break;
-
-	}
-
-	sct_value(value, bargraph);
-
-	//if(display_until_ticks < HAL_GetTicks() && state != SHOW_POT) {
-	if(((HAL_GetTick() - current_time) > 1000)  && state != SHOW_POT) {
-		state = SHOW_POT;
-	}
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
+	uint16_t pot_value = (raw_pot*501)/4096;	//convert values from ADC
+	uint8_t bargraph = (pot_value)*9/501;		//convert 0-500 value to bargraph value
+	sct_value(pot_value, bargraph);
 	HAL_Delay(50);
   }
   /* USER CODE END 3 */
@@ -418,31 +318,14 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)	//call back called after completed ADC conversion
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
  //raw_pot = HAL_ADC_GetValue(hadc);		//save ADC value after conversion into global variable
  //exponential smoothing:
  static uint32_t avg_pot;
- static uint8_t channel = 0;
-
- switch (channel) {
- 	 case 0:
- 		 raw_pot = avg_pot >> ADC_Q;
- 		 avg_pot -= raw_pot;
- 		 avg_pot += HAL_ADC_GetValue(hadc);
- 		 break;
-
- 	 case 1:
- 		 raw_temp = HAL_ADC_GetValue(hadc);
- 		 break;
-
- 	 case 2:
- 		 raw_volt = HAL_ADC_GetValue(hadc);
- 		 break;
- }
-
- if (__HAL_ADC_GET_FLAG(hadc, ADC_FLAG_EOS)) channel = 0;	//test if all 3 values were read
- else channel++;
+ raw_pot = avg_pot >> ADC_Q;
+ avg_pot -= raw_pot;
+ avg_pot += HAL_ADC_GetValue(hadc);
 
 }
 

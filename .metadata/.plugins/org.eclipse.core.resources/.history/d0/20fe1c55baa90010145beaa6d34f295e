@@ -204,7 +204,7 @@ int main(void)
 	sct_value(value, bargraph);
 
 	//if(display_until_ticks < HAL_GetTicks() && state != SHOW_POT) {
-	if(((HAL_GetTick() - current_time) > 1000)  && state != SHOW_POT) {
+	if(((HAL_GetTicks() - current_time) > 1000)  && state != SHOW_POT) {
 		state = SHOW_POT;
 	}
 
