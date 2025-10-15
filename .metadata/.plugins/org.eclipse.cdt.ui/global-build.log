@@ -992,3 +992,56 @@ Finished building: default.size.stdout
  
 Finished building: MKS4.list
  
+12:04:22 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:305:23: error: 'ADC_Q' undeclared (first use in this function)
+  305 |  raw_pot = avg_pot >> ADC_Q;
+      |                       ^~~~~
+../Core/Src/main.c:305:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:05:34 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+arm-none-eabi-gcc -o "MKS4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS4.elf
+ 
+arm-none-eabi-size  MKS4.elf 
+arm-none-eabi-objdump -h -S MKS4.elf  > "MKS4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11192	     12	   1780	  12984	   32b8	MKS4.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS4.list
+ 
+12:06:26 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS4.elf
+ 
+arm-none-eabi-size  MKS4.elf 
+arm-none-eabi-objdump -h -S MKS4.elf  > "MKS4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11192	     12	   1780	  12984	   32b8	MKS4.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS4.list
+ 
+12:07:30 **** Incremental Build of configuration Debug for project MKS4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS4.elf
+ 
+arm-none-eabi-size  MKS4.elf 
+arm-none-eabi-objdump -h -S MKS4.elf  > "MKS4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11192	     12	   1780	  12984	   32b8	MKS4.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS4.list
+ 

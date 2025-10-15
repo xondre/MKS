@@ -31,7 +31,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ADC_Q 7
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -110,8 +110,8 @@ int main(void)
 
 
     /* USER CODE BEGIN 3 */
-	uint16_t pot_value = (raw_pot*501)/4096;	//convert values from ADC
-	uint8_t bargraph = (pot_value)*9/501;		//convert 0-500 value to bargraph value
+	uint16_t pot_value = (raw_pot*501)/4096;	//
+	uint8_t bargraph = (pot_value)*9/501;
 	sct_value(pot_value, bargraph);
 	HAL_Delay(50);
   }
@@ -299,13 +299,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
- //raw_pot = HAL_ADC_GetValue(hadc);		//save ADC value after conversion into global variable
- //exponential smoothing:
- static uint32_t avg_pot;
- raw_pot = avg_pot >> ADC_Q;
- avg_pot -= raw_pot;
- avg_pot += HAL_ADC_GetValue(hadc);
-
+ raw_pot = HAL_ADC_GetValue(hadc);
 }
 
 /* USER CODE END 4 */
