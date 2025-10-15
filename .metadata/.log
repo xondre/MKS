@@ -164,3 +164,21 @@ org.eclipse.core.runtime.CoreException: Setup exceptions
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2025-10-08 11:40:29.052
 !MESSAGE Setup exceptions
+!SESSION 2025-10-15 11:03:15.884 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-15 11:03:32.835
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-15 11:03:32.840
+!MESSAGE Log4j2 initialized with config file C:\Temp\ondrejka\MKS\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-15 11:03:43.902
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-10-15 11:08:28.468
+!MESSAGE Indexed 'MKS4' (21 sources, 83 headers) in 3.27 sec: 4,619 declarations; 28,046 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0061%)
