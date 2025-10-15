@@ -83,53 +83,6 @@ void buttons(void){
 		state = SHOW_TEMP;
 		current_time = HAL_GetTick();
 	}
-
-	/*
-	static uint32_t old_s2;
-	static uint32_t old_s1, debounce_time;
-	static uint32_t old_time, off_time;
-	static uint16_t debounce = 0xFFFF;
-
-
-	uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
-	uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
-
-	if (Tick > off_time) {
-			LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
-
-	if (Tick > old_time + BTN_TIME) {
-		old_time = Tick;
-
-		if (old_s2 && !new_s2) { // falling edge
-			off_time = Tick + LED_TIME_SHORT;
-			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
-		old_s2 = new_s2;
-	}
-
-	if (Tick > debounce_time + DEBOUNCE_TIME) {
-		debounce_time = Tick;
-
-		debounce <<= 1;
-
-		if (new_s1) debounce |= 0x0001;
-
-
-		if (debounce == 0x7FFF) {
-	 		off_time = Tick + LED_TIME_LONG;
-	 		LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
-	}
-
-
-
-	//if (old_s1 && !new_s1) { // falling edge
-	 //	off_time = Tick + LED_TIME_LONG;
-	 	//LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-	//}
-	//old_s1 = new_s1;
-	*/
 }
 
 
