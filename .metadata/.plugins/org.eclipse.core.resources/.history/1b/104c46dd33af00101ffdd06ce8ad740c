@@ -104,19 +104,9 @@ static void uart_process_command(char *cmd){
 			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
 		}
 		printf("OK\r\n");
-	}else if (strcasecmp(token, "STATUS") == 0) {
-		if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin)) {
-			printf("LED 1 is ON\r\n");
-		}else {
-			printf("LED 1 is OFF\r\n");
-		}
-		if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin)) {
-			printf("LED 2 is ON\r\n");
-		}else {
-			printf("LED 2 is OFF\r\n");
-		}
 	}
 }
+
 
 
 
