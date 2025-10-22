@@ -1483,3 +1483,222 @@ arm-none-eabi-size  MKS5.elf
   15832	    104	   2432	  18368	   47c0	MKS5.elf
 Finished building: default.size.stdout
  
+12:50:42 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  16284	    104	   2432	  18820	   4984	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+12:51:33 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  16284	    104	   2432	  18820	   4984	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+12:52:35 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  16284	    104	   2432	  18820	   4984	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+12:52:49 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-size  MKS5.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16284	    104	   2432	  18820	   4984	MKS5.elf
+Finished building: default.size.stdout
+ 
+12:53:37 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15832	    104	   2432	  18368	   47c0	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:24:27 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:130:24: warning: too many arguments for format [-Wformat-extra-args]
+  130 |                 printf("Addr 0x04X =  0x0X02X\r\n", addr, value);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  19624	    104	   2520	  22248	   56e8	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:25:51 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  19624	    104	   2520	  22248	   56e8	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:28:39 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21080	    104	   2520	  23704	   5c98	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:30:24 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21060	    104	   2520	  23684	   5c84	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:33:20 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21084	    104	   2520	  23708	   5c9c	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:45:57 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:154:34: warning: conversion lacks type at end of format [-Wformat=]
+  154 |                         printf("% ", i, value);
+      |                                  ^
+../Core/Src/main.c:154:32: warning: too many arguments for format [-Wformat-extra-args]
+  154 |                         printf("% ", i, value);
+      |                                ^~~~
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21236	    104	   2520	  23860	   5d34	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:47:14 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:154:32: warning: too many arguments for format [-Wformat-extra-args]
+  154 |                         printf("%02X ", i, value);
+      |                                ^~~~~~~
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21240	    104	   2520	  23864	   5d38	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:48:08 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21236	    104	   2520	  23860	   5d34	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:52:10 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21256	    104	   2520	  23880	   5d48	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
+13:52:49 **** Incremental Build of configuration Debug for project MKS5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\MKS5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS5.elf
+ 
+arm-none-eabi-size  MKS5.elf 
+arm-none-eabi-objdump -h -S MKS5.elf  > "MKS5.list"
+   text	   data	    bss	    dec	    hex	filename
+  21256	    104	   2520	  23880	   5d48	MKS5.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS5.list
+ 
