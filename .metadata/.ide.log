@@ -1089,3 +1089,43 @@
 2025-10-22 11:27:24,653 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1127mS.
 2025-10-22 11:27:24,654 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
 2025-10-22 11:27:24,658 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-10-22 11:33:28,969 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-22 11:33:33,598 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-10-22 11:35:23,147 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 298409424 Bytes (926941184)
+2025-10-22 11:35:24,514 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 316761552 Bytes (926941184)
+2025-10-22 11:35:26,273 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 350838224 Bytes (926941184)
+2025-10-22 11:35:26,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-10-22 11:35:26,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-10-22 11:35:26,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-10-22 11:35:26,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-10-22 11:35:26,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-10-22 11:35:26,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-10-22 11:35:26,477 [INFO] CodeGenerator:892 - code generatio: config db path: C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2025-10-22 11:35:26,570 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\license.tmp_save
+2025-10-22 11:35:26,646 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\license.tmp
+2025-10-22 11:35:26,680 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\gpio.tmp_save
+2025-10-22 11:35:26,756 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\gpio.tmp
+2025-10-22 11:35:26,823 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\dma.tmp_save
+2025-10-22 11:35:26,897 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\dma.tmp
+2025-10-22 11:35:26,905 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\dma_GV.tmp_save
+2025-10-22 11:35:26,974 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\dma_GV.tmp
+2025-10-22 11:35:26,990 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\Core\Src\stm32f0xx_it.c_save
+2025-10-22 11:35:27,088 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\Core\Src\stm32f0xx_it.c
+2025-10-22 11:35:27,097 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\Core\Inc\stm32f0xx_it.h_save
+2025-10-22 11:35:27,177 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\Core\Inc\stm32f0xx_it.h
+2025-10-22 11:35:27,195 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\Core\Src\stm32f0xx_hal_msp.c_save
+2025-10-22 11:35:27,316 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\Core\Src\stm32f0xx_hal_msp.c
+2025-10-22 11:35:27,323 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\system.tmp_save
+2025-10-22 11:35:27,394 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\MXTmpFiles\system.tmp
+2025-10-22 11:35:27,410 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\Core\Inc\stm32f0xx_hal_conf.h_save
+2025-10-22 11:35:27,492 [INFO] CodeEngine:345 - Generated code: C:\Temp\ondrejka\MKS\MKS5\Core\Inc\stm32f0xx_hal_conf.h
+2025-10-22 11:35:27,520 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\Core\Inc\main.h_save
+2025-10-22 11:35:27,602 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\Core\Inc\main.h
+2025-10-22 11:35:27,611 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Temp\ondrejka\MKS\MKS5\Core\Src\main.c_save
+2025-10-22 11:35:27,739 [INFO] CodeEngine:289 - Generated code: C:\Temp\ondrejka\MKS\MKS5\Core\Src\main.c
+2025-10-22 11:35:28,155 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 211mS.
+2025-10-22 11:35:28,159 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-10-22 11:35:28,288 [INFO] ConfigFileManager:1595 - The Die is : DIE440
+2025-10-22 11:35:29,369 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1210mS.
+2025-10-22 11:35:29,370 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-10-22 11:35:29,374 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
