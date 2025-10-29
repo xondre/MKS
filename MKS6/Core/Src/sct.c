@@ -83,9 +83,11 @@ void sct_init( void) {
 
 void sct_value( uint16_t value, uint8_t led, uint8_t pointIndex) {
 
+	//addition which handles division of input value to display the right amount of digits
 	value += 5;
 	value /= 10;
 
+	//rest of the function
 	uint32_t reg = 0;
 
 	reg |= reg_values[0][(value / 100) % 10];
