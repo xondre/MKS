@@ -112,56 +112,30 @@ int main(void)
   uint8_t converting = 0;
   uint32_t Tick = HAL_GetTick();
   uint32_t oldTick = Tick;
-  enum { NTC, DS18B20} state = DS18B20;
-  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
-  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
-
   while (1)
   {
-
-	  if(HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) && (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) == 0)) {	// S1 on S2 off
-	  		state = NTC;
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
-
-
-	  }else if(HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) && (HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) == 0)) {	//S2 on S1 off
-	  		state = DS18B20;
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
+	/*  if(!converting) {
+		  OWConvertAll();
+		  converting = 1;
 	  }
 
+	  if(Tick >= oldTick + CONVERT_T_DELAY) {	//non-blocking
+		  converting = 0;
+		  oldTick = Tick;
 
-	  switch(state){
-	  	  case DS18B20:
-	  		  if(!converting) {
-		  		  OWConvertAll();
-		  		  converting = 1;
-	  		  }
+		  int16_t temp;
+		  if(OWReadTemperature(&temp)) sct_value(temp, 0, 10);
+		  else sct_value(000,0,0);
+	  }
+*/
+	  if(Tick >= oldTick + CONVERT_T_DELAY) {	//non-blocking
+		  oldTick = Tick;
+		  int16_t temp = data[HAL_ADC_GetValue(&hadc)]*10;
 
-	  		  if(Tick >= oldTick + CONVERT_T_DELAY) {
-		  		  converting = 0;
-		  		  oldTick = Tick;
-
-		  		  int16_t temp;
-		  		  if(OWReadTemperature(&temp)) sct_value(temp, 0, 10);
-		  		  else sct_value(000,0,0);
-	  		  }
-	  		  Tick = HAL_GetTick();
-	  		  break;
-
-	  	  case NTC:
-	  		  if(Tick >= oldTick + CONVERT_T_DELAY) {
-	  			  oldTick = Tick;
-	  			  int16_t temp = data[HAL_ADC_GetValue(&hadc)]*10;
-
-	  			  sct_value(temp, 0, 10);
-	  		  }
-	  		  Tick = HAL_GetTick();
-	  		  break;
-
+		  sct_value(temp, 0, 10);
 	  }
 
+	  Tick = HAL_GetTick();
 
     /* USER CODE END WHILE */
 

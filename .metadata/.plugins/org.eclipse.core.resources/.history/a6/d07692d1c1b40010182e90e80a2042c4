@@ -120,15 +120,15 @@ int main(void)
   {
 
 	  if(HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) && (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) == 0)) {	// S1 on S2 off
-	  		state = NTC;
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
+	  		state = DS18B20;
+	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
+	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
 
 
 	  }else if(HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) && (HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) == 0)) {	//S2 on S1 off
-	  		state = DS18B20;
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
+	  		state = NTC;
+	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
+	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
 	  }
 
 
@@ -155,7 +155,7 @@ int main(void)
 	  			  oldTick = Tick;
 	  			  int16_t temp = data[HAL_ADC_GetValue(&hadc)]*10;
 
-	  			  sct_value(temp, 0, 10);
+	  			  sct_value(27, 0, 10);
 	  		  }
 	  		  Tick = HAL_GetTick();
 	  		  break;
