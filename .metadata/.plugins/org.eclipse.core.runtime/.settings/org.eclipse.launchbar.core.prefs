@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:project_first Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS3 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS5 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS6 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS7 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:project_first Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS3 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS5 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS6 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS7 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS8 Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS2\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKS2\ Debug/activeLaunchTarget=null\:---
