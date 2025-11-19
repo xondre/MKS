@@ -46,7 +46,7 @@ UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 static volatile char key;
-const char password[5] = {'7', '9','3','2', '#'};
+const char password[4] = {'#', '3','0','4'};
 
 /* USER CODE END PV */
 
@@ -105,8 +105,8 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim3);	//interrupt enable
   HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, 0);
 
-  uint32_t Tick = HAL_GetTick();
-  uint32_t oldTick = Tick;
+  static uint32_t Tick = HAL_GetTick();
+  static uint32_t oldTick = Tick;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -123,7 +123,6 @@ int main(void)
 	   printf("pressed '%c'\n", key);
 	   if (key == password[correct]) {
 		  correct++;
-		  oldTick = Tick;
 	   }else{
 		  correct = 0;
 	   }
@@ -131,7 +130,7 @@ int main(void)
 	   key = 0;
 	  }
 
-	  if (correct == 5) {
+	  if (correct == 4) {
 		  printf("You shall pass\n");
 		  HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, 1);
 		  correct = 0;

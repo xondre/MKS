@@ -2429,3 +2429,239 @@ Finished building: default.size.stdout
  
 Finished building: MKS8.list
  
+12:28:35 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:15: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  136 |           if (key = 0) {
+      |               ^~~
+../Core/Src/main.c:80:24: warning: unused variable 'correct' [-Wunused-variable]
+   80 |         static uint8_t correct = 0;
+      |                        ^~~~~~~
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  15796	    104	   2056	  17956	   4624	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:29:02 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:80:24: warning: unused variable 'correct' [-Wunused-variable]
+   80 |         static uint8_t correct = 0;
+      |                        ^~~~~~~
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  15836	    104	   2056	  17996	   464c	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:29:53 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  15836	    104	   2056	  17996	   464c	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:32:18 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16036	    104	   2056	  18196	   4714	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:33:17 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-size  MKS8.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16036	    104	   2056	  18196	   4714	MKS8.elf
+Finished building: default.size.stdout
+ 
+12:35:58 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    104	   2056	  18184	   4708	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:37:41 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    104	   2056	  18184	   4708	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:40:28 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:12: warning: unused variable 'oldTick' [-Wunused-variable]
+  109 |   uint32_t oldTick = Tick;
+      |            ^~~~~~~
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  15988	    104	   2056	  18148	   46e4	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:43:07 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:34: error: initializer element is not constant
+  118 |           static uint32_t Tick = HAL_GetTick();
+      |                                  ^~~~~~~~~~~
+../Core/Src/main.c:119:37: error: initializer element is not constant
+  119 |           static uint32_t oldTick = Tick;
+      |                                     ^~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:43:55 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:26: error: initializer element is not constant
+  108 |   static uint32_t Tick = HAL_GetTick();
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c:109:29: error: initializer element is not constant
+  109 |   static uint32_t oldTick = Tick;
+      |                             ^~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:44:11 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    104	   2056	  18184	   4708	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:45:22 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16016	    104	   2056	  18176	   4700	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:48:24 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:12: warning: unused variable 'oldTick' [-Wunused-variable]
+  109 |   uint32_t oldTick = Tick;
+      |            ^~~~~~~
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  15988	    104	   2056	  18148	   46e4	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:52:06 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16028	    104	   2056	  18188	   470c	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:53:37 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:49:45: warning: excess elements in array initializer
+   49 | const char password[4] = {'7', '9','3','2', '#'};
+      |                                             ^~~
+../Core/Src/main.c:49:45: note: (near initialization for 'password')
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16028	    104	   2056	  18188	   470c	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
+12:54:05 **** Incremental Build of configuration Debug for project MKS8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS8\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS8.elf
+ 
+arm-none-eabi-size  MKS8.elf 
+arm-none-eabi-objdump -h -S MKS8.elf  > "MKS8.list"
+   text	   data	    bss	    dec	    hex	filename
+  16032	    104	   2056	  18192	   4710	MKS8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MKS8.list
+ 
