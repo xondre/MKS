@@ -1,7 +1,9 @@
 ../Core/Src/main.c:99:8:step	32	static
 ../Core/Src/main.c:70:5:main	16	static
-../Core/Src/main.c:109:8:circle	64	static
-../Core/Src/main.c:149:6:SystemClock_Config	88	static
-../Core/Src/main.c:195:13:MX_USART3_UART_Init	8	static
-../Core/Src/main.c:228:13:MX_GPIO_Init	56	static
-../Core/Src/main.c:320:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:109:8:circle	56	static
+../Core/Src/main.c:124:8:mouth	56	static
+../Core/Src/main.c:139:8:smile	24	static
+../Core/Src/main.c:185:6:SystemClock_Config	88	static
+../Core/Src/main.c:231:13:MX_USART3_UART_Init	8	static
+../Core/Src/main.c:264:13:MX_GPIO_Init	56	static
+../Core/Src/main.c:356:6:Error_Handler	4	static,ignoring_inline_asm

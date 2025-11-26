@@ -107,10 +107,8 @@ int main(void)
   }
 
   void circle(int16_t radius) {
-	   float sx = radius;
-	   float sy = 0;
-
-	  step(radius, 0, 0);
+	   int16_t sx = 0;
+	   int16_t sy = 0;
 
 	  for(uint16_t phi = 0; phi <= 360; phi += 3){
 		  float x = radius*cosf(phi*3.14159/180);
@@ -123,6 +121,44 @@ int main(void)
 
   }
 
+  void mouth(int16_t radius) {
+	  int16_t sx = radius;
+	  int16_t sy = 0;
+
+	  for(int16_t phi = 0; phi >= -180; phi -= 3){
+		  float x = radius*cosf(phi*3.14159/180);
+		  float y = -radius*sinf(phi*3.14159/180);
+		  step((int8_t)(x-sx), (int8_t)(y-sy), 1);
+		  sx = x;
+		  sy = y;
+	  }
+	  step(0,0,0);
+
+    }
+
+  void smile(int16_t radius) {
+	  circle(radius);
+	  step(radius+50, 0, 1);
+	  step(0, -radius/3, 1);
+	  step(0,0,0);
+	  step(radius, 0, 0);
+	  circle(radius/10);
+	  step(-radius, 0, 0);
+	  circle(radius/10);
+	  step(0, -radius, 0);
+	  step(0,0,0);
+	  HAL_Delay(50);
+	  step(0,0,1);
+	  mouth(radius/2);
+
+
+
+	  //step(-radius/2, 0, 0);
+	  //circle(radius/6);
+	  //step(radius, 0, 0);
+	  //circle(radius/6);
+  }
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -130,7 +166,7 @@ int main(void)
   while (1)
   {
 	  if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin) == 1) {
-		  circle(150);
+		  smile(150);
 	  }
 
 
