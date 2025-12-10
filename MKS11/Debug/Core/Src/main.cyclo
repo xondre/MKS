@@ -1,0 +1,12 @@
+../Core/Src/main.c:55:10:get_precision_tick	1
+../Core/Src/main.c:59:6:precision_sleep_until	2
+../Core/Src/main.c:65:9:random_int	1
+../Core/Src/main.c:91:6:HAL_GPIO_EXTI_Callback	4
+../Core/Src/main.c:123:5:main	6
+../Core/Src/main.c:202:6:SystemClock_Config	3
+../Core/Src/main.c:248:13:MX_RNG_Init	2
+../Core/Src/main.c:274:13:MX_SPI3_Init	2
+../Core/Src/main.c:312:13:MX_TIM2_Init	4
+../Core/Src/main.c:357:13:MX_USART3_UART_Init	2
+../Core/Src/main.c:390:13:MX_GPIO_Init	1
+../Core/Src/main.c:487:6:Error_Handler	1
