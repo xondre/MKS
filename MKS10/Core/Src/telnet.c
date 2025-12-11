@@ -48,11 +48,38 @@
 
 /*-----------------------------------------------------------------------------------*/
 
+static void http_client(char *s, uint16_t size)
+{
+	struct netconn *client;
+	struct netbuf *buf;
+	ip_addr_t ip;
+	uint16_t len = 0;
+	IP_ADDR4(&ip, 147,229,144,124);
+	const char *request = "GET /ip.php HTTP/1.1\r\n"
+			"Host: www.urel.feec.vutbr.cz\r\n"
+			"Connection: close\r\n"
+			"\r\n\r\n";
+	client = netconn_new(NETCONN_TCP);
+	if (netconn_connect(client, &ip, 80) == ERR_OK) {
+		netconn_write(client, request, strlen(request), NETCONN_COPY);
+		// Receive the HTTP response
+		s[0] = 0;
+		while (len < size && netconn_recv(client, &buf) == ERR_OK) {
+			len += netbuf_copy(buf, &s[len], size-len);
+			s[len] = 0;
+			netbuf_delete(buf);
+		}
+	} else {
+		sprintf(s, "Connection error\n");
+	}
+	netconn_delete(client);
+}
+
 static void telnet_process_command(char *cmd, struct netconn *conn)
 {
 		static char s[100];
-		sprintf(s, "received: '%s'\r\n", cmd);
-		netconn_write(conn, s, strlen(s), NETCONN_COPY);
+		//sprintf(s, "received: '%s'\r\n", cmd);
+		//netconn_write(conn, s, strlen(s), NETCONN_COPY);
 		char *token;
 		token = strtok(cmd, " ");
 		//strtok(NULL, " "); if we use the same string again
@@ -116,6 +143,11 @@ static void telnet_process_command(char *cmd, struct netconn *conn)
 				sprintf(s, "LED 3 is OFF\r\n");
 				netconn_write(conn, s, strlen(s), NETCONN_COPY);
 			}
+		}else if (strcasecmp(token, "CLIENT") == 0) {
+			char buff[500];
+			http_client(buff, sizeof(buff));
+			netconn_write(conn, buff, strlen(buff), NETCONN_COPY);
+
 		}
 }
 
