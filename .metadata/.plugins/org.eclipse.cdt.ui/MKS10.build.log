@@ -1,10 +1,17 @@
-15:52:30 **** Incremental Build of configuration Debug for project MKS10 ****
+16:11:19 **** Incremental Build of configuration Debug for project MKS10 ****
 make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../LWIP/App -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/BSP/Components/lan8742 -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/compat/posix -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/net -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/compat/stdc -I../Middlewares/Third_Party/LwIP/system/arch -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MKS10.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\ondrejka\MKS\MKS10\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MKS10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MKS10.elf
+ 
 arm-none-eabi-size  MKS10.elf 
+arm-none-eabi-objdump -h -S MKS10.elf  > "MKS10.list"
    text	   data	    bss	    dec	    hex	filename
-  98132	    144	  69936	 168212	  29114	MKS10.elf
+ 114448	    144	  70000	 184592	  2d110	MKS10.elf
 Finished building: default.size.stdout
  
+Finished building: MKS10.list
+ 
 
-15:52:32 Build Finished. 0 errors, 0 warnings. (took 1s.499ms)
+16:11:23 Build Finished. 0 errors, 0 warnings. (took 3s.635ms)
 

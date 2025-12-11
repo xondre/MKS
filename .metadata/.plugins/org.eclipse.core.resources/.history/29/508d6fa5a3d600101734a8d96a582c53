@@ -131,7 +131,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   /* Initialize tcp echo server */
-
+  tcpecho_init();
 
   while (1)
   {
@@ -307,7 +307,6 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
-  tcpecho_init();
   /* Infinite loop */
   for(;;)
   {
