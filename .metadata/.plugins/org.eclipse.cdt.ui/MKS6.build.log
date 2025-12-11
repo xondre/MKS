@@ -1,4 +1,4 @@
-13:30:25 **** Incremental Build of configuration Debug for project MKS6 ****
+17:13:52 **** Build of configuration Debug for project MKS6 ****
 make -j4 all 
 arm-none-eabi-size  MKS6.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  MKS6.elf
 Finished building: default.size.stdout
  
 
-13:30:26 Build Finished. 0 errors, 0 warnings. (took 479ms)
+17:13:52 Build Finished. 0 errors, 0 warnings. (took 524ms)
 

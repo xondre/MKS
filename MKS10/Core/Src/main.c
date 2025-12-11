@@ -23,6 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
 #include "lwip/apps/httpd.h"
 
 /* USER CODE END Includes */
@@ -58,6 +59,7 @@ void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
 extern void tcpecho_init(void);
+extern void telnet_init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -311,6 +313,9 @@ void StartDefaultTask(void const * argument)
 
   /* Initialize tcp echo server */
   tcpecho_init();
+
+  /* Initialize telnet server */
+  telnet_init();
 
   /* Initialize HTTP server */
   httpd_init();

@@ -1,21 +1,10 @@
-13:02:56 **** Incremental Build of configuration Debug for project project_first ****
+17:13:55 **** Build of configuration Debug for project project_first ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:93:11: warning: unused variable 'pole' [-Wunused-variable]
-   93 |   uint8_t pole[32] = {1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1};
-      |           ^~~~
-arm-none-eabi-gcc -o "project_first.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\ondrejka\MKS\project_first\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="project_first.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: project_first.elf
- 
 arm-none-eabi-size  project_first.elf 
-arm-none-eabi-objdump -h -S project_first.elf  > "project_first.list"
    text	   data	    bss	    dec	    hex	filename
    2484	      4	   1564	   4052	    fd4	project_first.elf
 Finished building: default.size.stdout
  
-Finished building: project_first.list
- 
 
-13:02:57 Build Finished. 0 errors, 1 warnings. (took 987ms)
+17:13:55 Build Finished. 0 errors, 0 warnings. (took 369ms)
 
