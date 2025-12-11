@@ -23,6 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "lwip/apps/httpd.h"
 
 /* USER CODE END Includes */
 
@@ -130,7 +131,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  /* Initialize tcp echo server */
+
 
 
   while (1)
@@ -307,7 +308,13 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
+
+  /* Initialize tcp echo server */
   tcpecho_init();
+
+  /* Initialize HTTP server */
+  httpd_init();
+
   /* Infinite loop */
   for(;;)
   {
